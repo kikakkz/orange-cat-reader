@@ -1,68 +1,42 @@
 {
-  "name": "orange-cat-reader",
-  "productName": "orange-cat-reader",
-  "version": "1.0.0",
-  "description": "My Electron application description",
-  "main": "src/main.js",
+  "name": "ocr",
+  "version": "0.0.1",
+  "private": true,
   "scripts": {
-    "start": "electron-forge start",
-    "dev": "electron-forge start",
-    "package": "electron-forge package",
-    "make": "electron-forge make",
-    "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\""
-  },
-  "keywords": [],
-  "author": "k",
-  "license": "MIT",
-  "config": {
-    "forge": {
-      "make_targets": {
-        "win32": [
-          "squirrel"
-        ],
-        "darwin": [
-          "zip"
-        ],
-        "linux": [
-          "deb",
-          "rpm"
-        ]
-      },
-      "electronPackagerConfig": {
-        "packageManager": "yarn"
-      },
-      "electronWinstallerConfig": {
-        "name": "orange_cat_reader"
-      },
-      "electronInstallerDebian": {},
-      "electronInstallerRedhat": {},
-      "github_repository": {
-        "owner": "",
-        "name": ""
-      },
-      "windowsStoreConfig": {
-        "packageName": "",
-        "name": "orangecatreader"
-      }
-    }
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "postinstall": "npx jetify"
   },
   "dependencies": {
+    "@react-native-community/async-storage": "^1.8.1",
+    "assert": "^2.0.0",
     "axios": "^0.19.2",
-    "electron-compile": "^6.4.4",
-    "electron-devtools-installer": "^2.1.0",
-    "electron-squirrel-startup": "^1.0.0",
-    "element-ui": "^2.13.0",
-    "vue": "^2.1.7",
-    "vue-axios": "^2.1.5",
-    "vue-router": "^3.1.6",
-    "vueify": "^9.4.1"
+    "buffer": "^5.5.0",
+    "jetifier": "^1.6.5",
+    "native-base": "^2.13.12",
+    "react": "16.8.3",
+    "react-native": "0.59",
+    "react-native-gesture-handler": "^1.6.1",
+    "react-native-md5": "^1.0.0",
+    "react-native-paper": "^3.6.0",
+    "react-native-reanimated": "^1.7.0",
+    "react-native-screen-brightness": "^2.0.0-alpha",
+    "react-native-screens": "^2.4.0",
+    "react-native-uuid": "^1.4.9",
+    "vue-native-core": "0.1.4",
+    "vue-native-helper": "0.1.4",
+    "vue-native-router": "^0.1.1"
   },
   "devDependencies": {
-    "babel-plugin-transform-async-to-generator": "^6.24.1",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "electron-forge": "^5.2.4",
-    "electron-prebuilt-compile": "4.0.0"
+    "@babel/core": "^7.0.0-0",
+    "@babel/runtime": "^7.8.7",
+    "babel-jest": "^25.1.0",
+    "jest": "^25.1.0",
+    "metro-react-native-babel-preset": "^0.59.0",
+    "react-test-renderer": "16.8.3",
+    "vue-native-scripts": "0.1.4"
+  },
+  "jest": {
+    "preset": "react-native"
   }
 }
